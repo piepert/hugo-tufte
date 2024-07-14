@@ -4,7 +4,6 @@ date: '2021-07-20T13:56:01-08:00'
 type: post
 title: More math
 subtitle: 'Wow this really works !'
-toc: true
 math: true
 categories:
   - katex

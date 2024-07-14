@@ -5,7 +5,6 @@ title: Tufte CSS
 # subtitle: A CSS library for creating beautiful Tufte-inspired HTML documents.
 meta: true
 math: true
-toc: false
 hideDate: true
 hideReadTime: true
 # categories: [tufte-css]
@@ -56,7 +55,7 @@ Also notice how Tufte CSS includes separate font files for bold (strong) and ita
 
 <span class="sans">If you prefer sans-serifs, use the sans class. It relies on Gill Sans, Tufte’s sans-serif font of choice.</span>
 
-Links in Tufte CSS match the body text in color and do not change on mouseover or when clicked. Here is a [dummy example](#) that goes nowhere. These links are underlined, since this is the most widely recognized indicator of clickable text. {{< marginnote ind="⊕" >}}Blue text, while also a widely recognizable clickable-text indicator, is crass and distracting. Luckily, it is also rendered unnecessary by the use of underlining.{{< /marginnote >}} However, because most browsers’ default underlining does not clear descenders and is so thick and distracting, the underline effect is instead achieved using CSS trickery involving background gradients instead of standard `text-decoration`. Credit goes to Adam Schwartz for that technique. 
+Links in Tufte CSS match the body text in color and do not change on mouseover or when clicked. Here is a [dummy example](#) that goes nowhere. These links are underlined, since this is the most widely recognized indicator of clickable text. {{< marginnote ind="⊕" >}}Blue text, while also a widely recognizable clickable-text indicator, is crass and distracting. Luckily, it is also rendered unnecessary by the use of underlining.{{< /marginnote >}} However, because most browsers’ default underlining does not clear descenders and is so thick and distracting, the underline effect is instead achieved using CSS trickery involving background gradients instead of standard `text-decoration`. Credit goes to Adam Schwartz for that technique.
 
 As always, these design choices are merely one approach that Tufte CSS provides by default. Other approaches can also be made to work. The goal is to make sentences readable without interference from links, as well as to make links immediately identifiable even by casual web users.
 
@@ -75,7 +74,7 @@ For a successful technology, reality must take precedence over public relations,
 I do not paint things, I paint only the differences between things.
 {{< /epigraph >}}
 
-If you’d like to introduce your page or a section of your page with some quotes, use epigraphs. Modeled after chapter epigraphs in Tufte’s books (particularly _Beautiful Evidence_), these are `blockquote` elements with a bit of specialized styling. Quoted text is italicized. The source goes in a `footer` element inside the `blockquote`. We have provided three examples in the epigraph of this section, demonstrating shorter and longer quotes, with and without a paragraph tag, and showing how multiple quotes within an epigraph fit together with the use of a wrapper class. 
+If you’d like to introduce your page or a section of your page with some quotes, use epigraphs. Modeled after chapter epigraphs in Tufte’s books (particularly _Beautiful Evidence_), these are `blockquote` elements with a bit of specialized styling. Quoted text is italicized. The source goes in a `footer` element inside the `blockquote`. We have provided three examples in the epigraph of this section, demonstrating shorter and longer quotes, with and without a paragraph tag, and showing how multiple quotes within an epigraph fit together with the use of a wrapper class.
 
 
 ## Sidenotes: Footnotes and Marginal Notes
@@ -99,7 +98,7 @@ You must manually assign a reference `id` to each side or margin note, replacing
 
 Immediately adjacent to that sidenote reference in the main text goes the sidenote content itself, in a `span` with class `sidenote`. This tag is also inserted directly in the middle of the body text, but is either pushed into the margin or hidden by default. Make sure to position your sidenotes correctly by keeping the sidenote-number label close to the sidenote itself.
 
-If you want a sidenote without footnote-style numberings, then you want a margin note.{{< marginnote ind="⊕" >}}This is a margin note. Notice there isn’t a number preceding the note.{{< /marginnote >}} On large screens, a margin note is just a sidenote that omits the reference number. This lessens the distracting effect taking away from the flow of the main text, but can increase the cognitive load of matching a margin note to its referent text. However, on small screens, a margin note is like a sidenote except its view&shy;ability-toggle is a symbol rather than a reference number. This document currently uses the symbol ⊕ (`&#8853;`), but it’s up to you. 
+If you want a sidenote without footnote-style numberings, then you want a margin note.{{< marginnote ind="⊕" >}}This is a margin note. Notice there isn’t a number preceding the note.{{< /marginnote >}} On large screens, a margin note is just a sidenote that omits the reference number. This lessens the distracting effect taking away from the flow of the main text, but can increase the cognitive load of matching a margin note to its referent text. However, on small screens, a margin note is like a sidenote except its view&shy;ability-toggle is a symbol rather than a reference number. This document currently uses the symbol ⊕ (`&#8853;`), but it’s up to you.
 
 Margin notes are created just like sidenotes, but with the `marginnote` class for the content and the `margin-toggle` class for the label and dummy checkbox. For instance, here is the code for the margin note used in the previous paragraph:
 
@@ -147,7 +146,7 @@ If you need a full-width figure, give it the `fullwidth` class. Make sure that�
   alt="Figurative map of the successive losses of the French Army in the Russian campaign, 1812-1813"
 >}}
 
-One obstacle to creating elegant figures on the web is the difficulty of handling different screen sizes, especially on the fly. Embedded `iframe` elements are particularly troublesome. For these instances we provide a helper class, `iframe-wrapper`, the most common use for which is probably YouTube videos, e.g. 
+One obstacle to creating elegant figures on the web is the difficulty of handling different screen sizes, especially on the fly. Embedded `iframe` elements are particularly troublesome. For these instances we provide a helper class, `iframe-wrapper`, the most common use for which is probably YouTube videos, e.g.
 
 ```html
 <figure class="iframe-wrapper">
